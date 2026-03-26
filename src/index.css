@@ -125,3 +125,13 @@
       radial-gradient(ellipse 70% 40% at 0% 70%, hsl(340, 30%, 95%, 0.6) 0%, transparent 45%);
   }
 }
+
+/*
+  Lovable injects “Edit with Lovable” on *.lovable.app as #lovable-badge.
+  Paid workspaces can turn it off in Project → Settings (see Lovable FAQ).
+*/
+#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
