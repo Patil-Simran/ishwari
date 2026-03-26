@@ -4,6 +4,7 @@ import CoverReveal from "@/components/CoverReveal";
 import ScratchOff from "@/components/ScratchOff";
 import Countdown from "@/components/Countdown";
 import DressCode from "@/components/DressCode";
+import FloatingPetals from "@/components/FloatingPetals";
 import couplePhoto from "@/assets/couple-photo.jpg";
 import floralBorder from "@/assets/floral-border.png";
 
@@ -35,10 +36,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "hsl(340, 15%, 98%)" }}>
+    <div className="min-h-screen overflow-x-hidden relative" style={{ backgroundColor: "hsl(340, 15%, 98%)" }}>
       <CoverReveal onReveal={() => setCoverDismissed(true)} />
 
       {coverDismissed && (
+        <>
+          <FloatingPetals />
         <div className="max-w-md mx-auto pb-24 relative">
           {/* Share button */}
           <motion.button
@@ -216,6 +219,7 @@ const Index = () => {
             </p>
           </motion.footer>
         </div>
+        </>
       )}
     </div>
   );
