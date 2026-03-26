@@ -36,10 +36,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "hsl(340, 15%, 98%)" }}>
+    <div className="min-h-screen overflow-x-hidden relative" style={{ backgroundColor: "hsl(340, 15%, 98%)" }}>
       <CoverReveal onReveal={() => setCoverDismissed(true)} />
 
       {coverDismissed && (
+        <>
+          <FloatingPetals />
         <div className="max-w-md mx-auto pb-24 relative">
           {/* Share button */}
           <motion.button
