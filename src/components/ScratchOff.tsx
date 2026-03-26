@@ -137,8 +137,8 @@ const ScratchOff = ({ label, revealText, size = 100 }: ScratchOffProps) => {
         style={{ width: size, height: size }}
       >
         {/* Hidden text underneath */}
-        <div className="absolute inset-0 flex items-center justify-center bg-cream rounded-full border-2 border-gold/30">
-          <span className="font-display text-crimson text-2xl italic font-semibold">
+        <div className="absolute inset-0 flex items-center justify-center rounded-full border-2" style={{ backgroundColor: "hsl(340, 30%, 95%)", borderColor: "hsl(43, 72%, 55%, 0.3)" }}>
+          <span className="font-display text-2xl italic font-semibold" style={{ color: "hsl(340, 65%, 47%)" }}>
             {revealText}
           </span>
         </div>
