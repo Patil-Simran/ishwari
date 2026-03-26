@@ -219,6 +219,7 @@ const Index = () => {
             </p>
           </motion.footer>
         </div>
+        </>
       )}
     </div>
   );
