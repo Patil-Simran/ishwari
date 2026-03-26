@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import dressCodeImg from "@/assets/dresscode-illustration.png";
 
 const DressCode = () => {
   return (
@@ -12,54 +11,42 @@ const DressCode = () => {
         className="text-center"
       >
         <p className="font-body text-muted-foreground text-xs tracking-[0.3em] uppercase mb-2">
-          Attire
+          What to Wear
         </p>
-        <h2 className="font-display text-crimson text-3xl italic mb-6">
+        <h2 className="font-display text-3xl italic mb-8" style={{ color: "hsl(340, 65%, 47%)" }}>
           Dress Code
         </h2>
 
-        <div className="flex justify-center mb-6">
-          <img
-            src={dressCodeImg}
-            alt="Formal attire illustration"
-            loading="lazy"
-            width={300}
-            height={400}
-            className="w-48 h-auto opacity-80"
-          />
-        </div>
-
-        <div className="space-y-4 max-w-xs mx-auto">
-          <div className="border-t border-crimson/10 pt-4">
-            <h3 className="font-display text-foreground text-lg italic">Black Tie</h3>
+        <div className="space-y-6 max-w-xs mx-auto">
+          <motion.div
+            className="p-6 rounded-lg"
+            style={{ backgroundColor: "hsl(340, 30%, 95%)" }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-3xl mb-3">👗</div>
+            <h3 className="font-display text-foreground text-lg italic">For Women</h3>
             <p className="font-body text-muted-foreground text-sm mt-1 leading-relaxed">
-              Floor-length gowns & tuxedos.
-              <br />
-              Dark, jewel-toned palettes preferred.
+              Western Gown / Frock
             </p>
-          </div>
+          </motion.div>
 
-          <div className="border-t border-crimson/10 pt-4">
-            <h3 className="font-display text-foreground text-lg italic">Color Notes</h3>
-            <div className="flex justify-center gap-3 mt-3">
-              {[
-                { color: "hsl(348, 80%, 28%)", label: "Crimson" },
-                { color: "hsl(210, 20%, 12%)", label: "Midnight" },
-                { color: "hsl(43, 72%, 55%)", label: "Gold" },
-                { color: "hsl(150, 20%, 30%)", label: "Forest" },
-              ].map((c) => (
-                <div key={c.label} className="flex flex-col items-center gap-1">
-                  <div
-                    className="w-8 h-8 rounded-full border border-border"
-                    style={{ backgroundColor: c.color }}
-                  />
-                  <span className="font-body text-muted-foreground text-[9px] tracking-wider uppercase">
-                    {c.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <motion.div
+            className="p-6 rounded-lg"
+            style={{ backgroundColor: "hsl(340, 30%, 95%)" }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-3xl mb-3">👔</div>
+            <h3 className="font-display text-foreground text-lg italic">For Men</h3>
+            <p className="font-body text-muted-foreground text-sm mt-1 leading-relaxed">
+              Fancy Shirt
+            </p>
+          </motion.div>
         </div>
       </motion.div>
     </div>

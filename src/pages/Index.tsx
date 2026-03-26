@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import CoverReveal from "@/components/CoverReveal";
 import ScratchOff from "@/components/ScratchOff";
 import Countdown from "@/components/Countdown";
-import VenueSection from "@/components/VenueSection";
 import DressCode from "@/components/DressCode";
+import couplePhoto from "@/assets/couple-photo.jpg";
 import floralBorder from "@/assets/floral-border.png";
 
 const fadeUp = {
@@ -19,8 +19,8 @@ const Index = () => {
 
   const handleShare = async () => {
     const shareData = {
-      title: "Alessandra & Marco — Wedding",
-      text: "You're invited to our wedding! 💍",
+      title: "Ishwari's Bride-to-Be Party 💍",
+      text: "You're invited to Ishwari's Bride-to-Be celebration! 🎉",
       url: window.location.href,
     };
     try {
@@ -35,15 +35,16 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-warm-white overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "hsl(340, 15%, 98%)" }}>
       <CoverReveal onReveal={() => setCoverDismissed(true)} />
 
       {coverDismissed && (
         <div className="max-w-md mx-auto pb-24 relative">
-          {/* Floating share button */}
+          {/* Share button */}
           <motion.button
             onClick={handleShare}
-            className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-crimson flex items-center justify-center shadow-lg active:scale-95 transition-transform"
+            className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform"
+            style={{ backgroundColor: "hsl(340, 65%, 47%)" }}
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.5, type: "spring" }}
@@ -58,58 +59,76 @@ const Index = () => {
 
           {/* Hero */}
           <motion.section
-            className="min-h-[100svh] flex flex-col items-center justify-center px-8 text-center safe-top"
+            className="min-h-[100svh] flex flex-col items-center justify-center px-8 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            <p className="font-body text-muted-foreground text-[11px] tracking-[0.35em] uppercase mb-10">
-              Together with their families
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="mb-8"
+            >
+              <div
+                className="w-40 h-40 rounded-full mx-auto overflow-hidden shadow-xl"
+                style={{ border: "3px solid hsl(340, 65%, 47%, 0.3)" }}
+              >
+                <img
+                  src={couplePhoto}
+                  alt="Ishwari"
+                  className="w-full h-full object-cover object-[center_20%]"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </motion.div>
+
+            <p className="font-body text-muted-foreground text-[11px] tracking-[0.35em] uppercase mb-4">
+              You're Invited to
             </p>
-            <h1 className="font-display text-crimson text-[2.8rem] leading-[1.1] italic">
-              Alessandra
+            <h1 className="font-display text-[2.6rem] leading-[1.1] italic" style={{ color: "hsl(340, 65%, 47%)" }}>
+              Ishwari's
             </h1>
-            <p className="font-display text-gold text-xl my-3 italic">&</p>
-            <h1 className="font-display text-crimson text-[2.8rem] leading-[1.1] italic">
-              Marco
-            </h1>
-            <p className="font-body text-muted-foreground text-[11px] tracking-[0.25em] uppercase mt-10">
-              Request the pleasure of your company
-            </p>
+            <h2 className="font-display text-2xl italic mt-1" style={{ color: "hsl(43, 72%, 55%)" }}>
+              Bride-to-Be Party
+            </h2>
+            <div className="text-3xl mt-4">💍✨</div>
 
             <motion.div
-              className="mt-16 opacity-30"
+              className="mt-14 opacity-30"
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
             >
-              <svg width="16" height="28" viewBox="0 0 16 28" className="text-crimson">
+              <svg width="16" height="28" viewBox="0 0 16 28" style={{ color: "hsl(340, 65%, 47%)" }}>
                 <path d="M8 0 L8 22 M2 16 L8 22 L14 16" stroke="currentColor" strokeWidth="1" fill="none" />
               </svg>
             </motion.div>
           </motion.section>
 
-          {/* Scratch-Off Reveal */}
+          {/* Scratch-Off Date Reveal */}
           <motion.section className="py-20 px-6" {...fadeUp}>
             <div className="text-center mb-10">
               <p className="font-body text-muted-foreground text-[10px] tracking-[0.35em] uppercase mb-3">
                 Save the Date
               </p>
-              <h2 className="font-display text-crimson text-3xl italic">Reveal</h2>
+              <h2 className="font-display text-3xl italic" style={{ color: "hsl(340, 65%, 47%)" }}>
+                Reveal
+              </h2>
               <p className="font-body text-muted-foreground text-xs mt-2 italic">
                 Scratch the gold to uncover the date
               </p>
             </div>
-
             <div className="flex justify-center gap-5">
-              <ScratchOff label="Day" revealText="10" size={88} />
-              <ScratchOff label="Month" revealText="Sept" size={88} />
-              <ScratchOff label="Year" revealText="2027" size={88} />
+              <ScratchOff label="Day" revealText="28" size={88} />
+              <ScratchOff label="Month" revealText="Mar" size={88} />
+              <ScratchOff label="Year" revealText="2026" size={88} />
             </div>
           </motion.section>
 
-          {/* Divider */}
+          {/* Thin divider */}
           <div className="flex justify-center py-4">
-            <div className="w-px h-16 bg-crimson/15" />
+            <div className="w-px h-16" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.15)" }} />
           </div>
 
           {/* Countdown */}
@@ -119,23 +138,60 @@ const Index = () => {
 
           {/* Divider */}
           <div className="flex justify-center py-4">
-            <div className="w-px h-16 bg-crimson/15" />
+            <div className="w-px h-16" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.15)" }} />
           </div>
 
-          {/* Venue */}
-          <section className="py-12">
-            <VenueSection />
-          </section>
+          {/* Details */}
+          <motion.section className="py-14 px-6 text-center" {...fadeUp}>
+            <p className="font-body text-muted-foreground text-[10px] tracking-[0.35em] uppercase mb-3">
+              Event Details
+            </p>
+
+            <div className="space-y-8 max-w-xs mx-auto">
+              <div>
+                <div className="text-2xl mb-2">🕖</div>
+                <h3 className="font-display text-foreground text-lg italic">Time</h3>
+                <p className="font-body text-muted-foreground text-base mt-1">7:00 PM Onwards</p>
+              </div>
+
+              <div>
+                <div className="text-2xl mb-2">📍</div>
+                <h3 className="font-display text-foreground text-lg italic">Venue</h3>
+                <p className="font-body text-muted-foreground text-base mt-1 leading-relaxed">
+                  Ishwari's Mama & Mami's Home
+                  <br />
+                  <span className="font-display italic" style={{ color: "hsl(340, 65%, 47%)" }}>
+                    Nilaya Society
+                  </span>
+                </p>
+              </div>
+
+              <div>
+                <div className="text-2xl mb-2">📅</div>
+                <h3 className="font-display text-foreground text-lg italic">Date</h3>
+                <p className="font-body text-muted-foreground text-base mt-1">
+                  28th March, 2026
+                  <br />
+                  <span className="text-sm">Saturday Evening</span>
+                </p>
+              </div>
+            </div>
+          </motion.section>
 
           {/* Divider */}
           <div className="flex justify-center py-4">
-            <div className="w-px h-16 bg-crimson/15" />
+            <div className="w-px h-16" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.15)" }} />
           </div>
 
           {/* Dress Code */}
           <section className="py-12">
             <DressCode />
           </section>
+
+          {/* Divider */}
+          <div className="flex justify-center py-4">
+            <div className="w-px h-16" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.15)" }} />
+          </div>
 
           {/* Footer */}
           <motion.footer className="py-20 text-center px-8" {...fadeUp}>
@@ -147,13 +203,16 @@ const Index = () => {
               width={400}
               height={170}
             />
-            <p className="font-display text-crimson text-2xl italic leading-relaxed mb-3">
-              We can't wait to
+            <p className="font-display text-2xl italic leading-relaxed mb-3" style={{ color: "hsl(340, 65%, 47%)" }}>
+              The Patil Family
               <br />
-              celebrate with you
+              eagerly awaits
+              <br />
+              your arrival
             </p>
-            <p className="font-body text-muted-foreground text-[10px] tracking-[0.3em] uppercase mt-6">
-              A & M — September 2027
+            <div className="text-2xl mt-4">🎉🥂</div>
+            <p className="font-body text-muted-foreground text-[10px] tracking-[0.3em] uppercase mt-8">
+              With love & excitement
             </p>
           </motion.footer>
         </div>
