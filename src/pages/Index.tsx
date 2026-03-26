@@ -6,6 +6,7 @@ import Countdown from "@/components/Countdown";
 import DressCode from "@/components/DressCode";
 import FloatingPetals from "@/components/FloatingPetals";
 import ScrollDownHint from "@/components/ScrollDownHint";
+import InviteCalendarIcon from "@/components/InviteCalendarIcon";
 import couplePhoto from "@/assets/couple-photo.jpg";
 import floralBorder from "@/assets/floral-border.png";
 
@@ -139,7 +140,7 @@ const Index = () => {
               </div>
 
               <div>
-                <div className="text-4xl sm:text-5xl mb-3">📅</div>
+                <InviteCalendarIcon className="w-[3.25rem] h-[3.25rem] sm:w-16 sm:h-16 mx-auto mb-3 text-[hsl(340,65%,47%)]" />
                 <h3 className="font-display text-foreground text-xl sm:text-2xl italic">Date</h3>
                 <p className="font-body text-muted-foreground text-lg sm:text-xl mt-2">
                   28th March, 2026
