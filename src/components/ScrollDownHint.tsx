@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 /** Thick chevron so guests know there is more content below. */
 const ScrollDownHint = ({ className = "" }: { className?: string }) => (
   <motion.div
-    className={`flex flex-col items-center justify-center ${className}`}
+    className={`-mt-2 flex flex-col items-center justify-center ${className}`}
     aria-hidden="true"
     animate={{ y: [0, 10, 0] }}
     transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}

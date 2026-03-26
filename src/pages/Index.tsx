@@ -19,23 +19,6 @@ const fadeUp = {
 const Index = () => {
   const [coverDismissed, setCoverDismissed] = useState(false);
 
-  const handleShare = async () => {
-    const shareData = {
-      title: "Ishwari's Bride-to-Be Party 💍",
-      text: "You're invited to Ishwari's Bride-to-Be celebration! 🎉",
-      url: window.location.href,
-    };
-    try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-      } else {
-        await navigator.clipboard.writeText(window.location.href);
-      }
-    } catch {
-      // user cancelled
-    }
-  };
-
   return (
     <div
       className="invite-shell min-h-screen overflow-x-hidden relative"
@@ -46,24 +29,7 @@ const Index = () => {
       {coverDismissed && (
         <div className="relative z-[1]">
           <FloatingPetals />
-        <div className="max-w-2xl mx-auto pb-28 sm:pb-32 relative px-3 sm:px-6">
-          {/* Share button */}
-          <motion.button
-            onClick={handleShare}
-            className="fixed bottom-6 right-6 z-40 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform"
-            style={{ backgroundColor: "hsl(340, 65%, 47%)" }}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 1.5, type: "spring" }}
-            aria-label="Share invitation"
-          >
-            <svg className="w-[22px] h-[22px] sm:w-6 sm:h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-              <polyline points="16 6 12 2 8 6" />
-              <line x1="12" y1="2" x2="12" y2="15" />
-            </svg>
-          </motion.button>
-
+        <div className="max-w-2xl mx-auto pb-20 sm:pb-24 relative px-3 sm:px-6">
           {/* Hero */}
           <motion.section
             className="min-h-[100svh] flex flex-col items-center justify-center px-6 sm:px-10 text-center pt-6"
@@ -114,7 +80,7 @@ const Index = () => {
             </h2>
             <div className="text-5xl sm:text-6xl mt-6 sm:mt-7">💍✨</div>
 
-            <ScrollDownHint className="mt-14 sm:mt-20 pb-2" />
+            <ScrollDownHint className="mt-5 sm:mt-8 pb-1" />
           </motion.section>
 
           {/* Scratch-Off Date Reveal */}
@@ -138,13 +104,13 @@ const Index = () => {
               <ScratchOff label="Month" revealText="Mar" size={128} />
               <ScratchOff label="Year" revealText="2026" size={128} />
             </div>
-            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
+            <ScrollDownHint className="pt-3 sm:pt-5 pb-1" />
           </motion.section>
 
           {/* Countdown */}
           <motion.section className="py-14 sm:py-16" {...fadeUp}>
             <Countdown />
-            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
+            <ScrollDownHint className="pt-3 sm:pt-5 pb-1" />
           </motion.section>
 
           {/* Details */}
@@ -182,13 +148,13 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <ScrollDownHint className="pt-12 sm:pt-14 pb-2" />
+            <ScrollDownHint className="pt-3 sm:pt-5 pb-1" />
           </motion.section>
 
           {/* Dress Code */}
           <section className="py-14 sm:py-16">
             <DressCode />
-            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
+            <ScrollDownHint className="pt-3 sm:pt-5 pb-1" />
           </section>
 
           {/* Footer */}
