@@ -124,23 +124,6 @@ const Index = () => {
             </motion.div>
           </motion.section>
 
-          {/* Welcome line + ornament */}
-          <motion.section className="px-8 sm:px-12 py-10 sm:py-14 text-center" {...fadeUp}>
-            <div className="flex items-center justify-center gap-4 mb-8 max-w-sm mx-auto">
-              <span className="h-px flex-1 max-w-[4rem] bg-gradient-to-r from-transparent to-[hsl(340,65%,47%,0.35)]" aria-hidden />
-              <span className="font-display text-lg sm:text-xl italic" style={{ color: "hsl(43, 72%, 50%)" }}>
-                ✦
-              </span>
-              <span className="h-px flex-1 max-w-[4rem] bg-gradient-to-l from-transparent to-[hsl(340,65%,47%,0.35)]" aria-hidden />
-            </div>
-            <p
-              className="font-display italic leading-relaxed text-foreground/85 max-w-xl mx-auto px-2"
-              style={{ fontSize: "clamp(1.2rem, 4.2vw, 1.65rem)" }}
-            >
-              An evening of love, laughter &amp; memories in the making — we would be honoured by your presence.
-            </p>
-          </motion.section>
-
           {/* Scratch-Off Date Reveal */}
           <motion.section className="py-16 sm:py-24 px-6 sm:px-8" {...fadeUp}>
             <div className="text-center mb-12 sm:mb-14">
@@ -225,13 +208,6 @@ const Index = () => {
           <section className="py-14 sm:py-16">
             <DressCode />
           </section>
-
-          {/* RSVP hint */}
-          <motion.section className="px-8 sm:px-10 pb-4 text-center" {...fadeUp}>
-            <p className="font-body text-muted-foreground text-sm sm:text-base italic max-w-md mx-auto leading-relaxed">
-              Kindly let us know if you can join — your presence will make the celebration complete.
-            </p>
-          </motion.section>
 
           {/* Divider */}
           <div className="flex justify-center py-5">
