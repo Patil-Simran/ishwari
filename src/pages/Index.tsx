@@ -4,6 +4,7 @@ import CoverReveal from "@/components/CoverReveal";
 import ScratchOff from "@/components/ScratchOff";
 import Countdown from "@/components/Countdown";
 import DressCode from "@/components/DressCode";
+import FloatingPetals from "@/components/FloatingPetals";
 import couplePhoto from "@/assets/couple-photo.jpg";
 import floralBorder from "@/assets/floral-border.png";
 
