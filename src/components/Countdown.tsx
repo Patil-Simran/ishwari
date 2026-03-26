@@ -30,11 +30,11 @@ const Countdown = () => {
   ];
 
   return (
-    <div className="border-2 rounded-sm p-8 mx-4" style={{ borderColor: "hsl(340, 65%, 47%, 0.2)" }}>
-      <p className="font-body text-center text-muted-foreground text-xs tracking-[0.3em] uppercase mb-6">
+    <div className="border-2 rounded-md p-10 sm:p-12 mx-4 sm:mx-6" style={{ borderColor: "hsl(340, 65%, 47%, 0.22)" }}>
+      <p className="font-body text-center text-muted-foreground text-sm tracking-[0.28em] uppercase mb-8">
         Counting down to the celebration
       </p>
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-4 gap-3 sm:gap-4">
         {units.map((unit, i) => (
           <motion.div
             key={unit.label}
@@ -44,10 +44,10 @@ const Countdown = () => {
             transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="font-display text-3xl md:text-4xl tabular-nums" style={{ color: "hsl(340, 65%, 47%)" }}>
+            <div className="font-display text-4xl sm:text-5xl tabular-nums leading-none" style={{ color: "hsl(340, 65%, 47%)" }}>
               {String(unit.value).padStart(2, "0")}
             </div>
-            <div className="font-body text-muted-foreground text-[10px] tracking-[0.2em] uppercase mt-1">
+            <div className="font-body text-muted-foreground text-xs tracking-[0.22em] uppercase mt-2">
               {unit.label}
             </div>
           </motion.div>

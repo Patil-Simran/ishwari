@@ -138,7 +138,18 @@ const ScratchOff = ({ label, revealText, size = 100 }: ScratchOffProps) => {
       >
         {/* Hidden text underneath */}
         <div className="absolute inset-0 flex items-center justify-center rounded-full border-2" style={{ backgroundColor: "hsl(340, 30%, 95%)", borderColor: "hsl(43, 72%, 55%, 0.3)" }}>
-          <span className="font-display text-2xl italic font-semibold" style={{ color: "hsl(340, 65%, 47%)" }}>
+          <span
+            className={`font-display italic font-semibold ${
+              revealText.length > 3
+                ? size >= 104
+                  ? "text-xl sm:text-2xl"
+                  : "text-lg sm:text-xl"
+                : size >= 104
+                  ? "text-3xl sm:text-4xl"
+                  : "text-2xl sm:text-3xl"
+            }`}
+            style={{ color: "hsl(340, 65%, 47%)" }}
+          >
             {revealText}
           </span>
         </div>
@@ -161,7 +172,7 @@ const ScratchOff = ({ label, revealText, size = 100 }: ScratchOffProps) => {
           onTouchEnd={handleEnd}
         />
       </div>
-      <span className="font-body text-muted-foreground text-xs tracking-[0.2em] uppercase">
+      <span className="font-body text-muted-foreground text-sm tracking-[0.18em] uppercase">
         {label}
       </span>
     </div>

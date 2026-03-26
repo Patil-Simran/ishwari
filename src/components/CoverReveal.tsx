@@ -75,8 +75,8 @@ const CoverReveal = ({ onReveal }: { onReveal: () => void }) => {
             transition={{ duration: 0.6 }}
           >
             <motion.p
-              className="font-body text-sm tracking-[0.3em] uppercase mb-4"
-              style={{ color: "hsla(0, 0%, 100%, 0.7)" }}
+              className="font-body text-base sm:text-lg tracking-[0.28em] uppercase mb-5"
+              style={{ color: "hsla(0, 0%, 100%, 0.75)" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -89,10 +89,10 @@ const CoverReveal = ({ onReveal }: { onReveal: () => void }) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
             >
-              <span className="text-4xl">💍</span>
+              <span className="text-5xl sm:text-6xl">💍</span>
             </motion.div>
             <motion.h1
-              className="font-display text-5xl md:text-6xl italic leading-tight"
+              className="font-display text-6xl sm:text-7xl md:text-7xl italic leading-tight px-2"
               style={{ color: "white" }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,8 +101,8 @@ const CoverReveal = ({ onReveal }: { onReveal: () => void }) => {
               Bride to Be
             </motion.h1>
             <motion.p
-              className="font-body text-xs tracking-[0.2em] uppercase mt-8"
-              style={{ color: "hsla(0, 0%, 100%, 0.5)" }}
+              className="font-body text-sm sm:text-base tracking-[0.22em] uppercase mt-10"
+              style={{ color: "hsla(0, 0%, 100%, 0.55)" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
