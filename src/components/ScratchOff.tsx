@@ -141,12 +141,16 @@ const ScratchOff = ({ label, revealText, size = 100 }: ScratchOffProps) => {
           <span
             className={`font-display italic font-semibold ${
               revealText.length > 3
-                ? size >= 104
-                  ? "text-xl sm:text-2xl"
-                  : "text-lg sm:text-xl"
-                : size >= 104
-                  ? "text-3xl sm:text-4xl"
-                  : "text-2xl sm:text-3xl"
+                ? size >= 120
+                  ? "text-2xl sm:text-3xl"
+                  : size >= 104
+                    ? "text-xl sm:text-2xl"
+                    : "text-lg sm:text-xl"
+                : size >= 120
+                  ? "text-4xl sm:text-5xl"
+                  : size >= 104
+                    ? "text-3xl sm:text-4xl"
+                    : "text-2xl sm:text-3xl"
             }`}
             style={{ color: "hsl(340, 65%, 47%)" }}
           >

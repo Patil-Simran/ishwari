@@ -44,7 +44,10 @@ const Countdown = () => {
             transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="font-display text-4xl sm:text-5xl tabular-nums leading-none" style={{ color: "hsl(340, 65%, 47%)" }}>
+            <div
+              className="font-display tabular-nums leading-none"
+              style={{ color: "hsl(340, 65%, 47%)", fontSize: "clamp(2.25rem, 9vw, 3.25rem)" }}
+            >
               {String(unit.value).padStart(2, "0")}
             </div>
             <div className="font-body text-muted-foreground text-xs tracking-[0.22em] uppercase mt-2">

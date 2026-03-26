@@ -93,8 +93,13 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 1.65;
+  }
+
+  /* Whole invite scales up vs default (mobile preview shows a big jump) */
+  .invite-shell {
+    font-size: 1.1875rem;
   }
 }
 

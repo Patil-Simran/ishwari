@@ -45,7 +45,7 @@ const Index = () => {
       {coverDismissed && (
         <div className="relative z-[1]">
           <FloatingPetals />
-        <div className="max-w-xl mx-auto pb-28 sm:pb-32 relative px-2 sm:px-4">
+        <div className="max-w-2xl mx-auto pb-28 sm:pb-32 relative px-3 sm:px-6">
           {/* Share button */}
           <motion.button
             onClick={handleShare}
@@ -77,29 +77,41 @@ const Index = () => {
               className="mb-10 sm:mb-12"
             >
               <div
-                className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full mx-auto overflow-hidden shadow-2xl ring-4 ring-[hsl(340,65%,47%,0.12)]"
+                className="rounded-full mx-auto overflow-hidden shadow-2xl ring-4 ring-[hsl(340,65%,47%,0.12)] w-[min(88vw,20rem)] h-[min(88vw,20rem)] sm:w-[22rem] sm:h-[22rem] md:w-[26rem] md:h-[26rem]"
                 style={{ border: "4px solid hsl(340, 65%, 47%, 0.35)" }}
               >
                 <img
                   src={couplePhoto}
                   alt="Ishwari"
                   className="w-full h-full object-cover object-[center_20%]"
-                  width={576}
-                  height={576}
+                  width={640}
+                  height={640}
                 />
               </div>
             </motion.div>
 
-            <p className="font-body text-muted-foreground text-xs sm:text-sm tracking-[0.32em] uppercase mb-5">
+            <p className="font-body text-muted-foreground text-sm sm:text-base tracking-[0.28em] uppercase mb-5">
               You're Invited to
             </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-[3.5rem] leading-[1.08] italic" style={{ color: "hsl(340, 65%, 47%)" }}>
+            <h1
+              className="font-display leading-[1.05] italic"
+              style={{
+                color: "hsl(340, 65%, 47%)",
+                fontSize: "clamp(2.75rem, 11vw, 4.25rem)",
+              }}
+            >
               Ishwari's
             </h1>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-[2.65rem] italic mt-2 sm:mt-3" style={{ color: "hsl(43, 72%, 55%)" }}>
+            <h2
+              className="font-display italic mt-2 sm:mt-3"
+              style={{
+                color: "hsl(43, 72%, 55%)",
+                fontSize: "clamp(1.85rem, 6.5vw, 3rem)",
+              }}
+            >
               Bride-to-Be Party
             </h2>
-            <div className="text-4xl sm:text-5xl mt-5 sm:mt-6">💍✨</div>
+            <div className="text-5xl sm:text-6xl mt-6 sm:mt-7">💍✨</div>
 
             <motion.div
               className="mt-16 sm:mt-20 opacity-[0.35]"
@@ -121,7 +133,10 @@ const Index = () => {
               </span>
               <span className="h-px flex-1 max-w-[4rem] bg-gradient-to-l from-transparent to-[hsl(340,65%,47%,0.35)]" aria-hidden />
             </div>
-            <p className="font-display text-xl sm:text-2xl md:text-[1.75rem] italic leading-relaxed text-foreground/85 max-w-lg mx-auto">
+            <p
+              className="font-display italic leading-relaxed text-foreground/85 max-w-xl mx-auto px-2"
+              style={{ fontSize: "clamp(1.2rem, 4.2vw, 1.65rem)" }}
+            >
               An evening of love, laughter &amp; memories in the making — we would be honoured by your presence.
             </p>
           </motion.section>
@@ -132,17 +147,20 @@ const Index = () => {
               <p className="font-body text-muted-foreground text-xs sm:text-sm tracking-[0.32em] uppercase mb-4">
                 Save the Date
               </p>
-              <h2 className="font-display text-4xl sm:text-[2.75rem] italic" style={{ color: "hsl(340, 65%, 47%)" }}>
+              <h2
+                className="font-display italic"
+                style={{ color: "hsl(340, 65%, 47%)", fontSize: "clamp(2.25rem, 8vw, 3rem)" }}
+              >
                 Reveal
               </h2>
               <p className="font-body text-muted-foreground text-sm sm:text-base mt-3 italic">
                 Scratch the gold to uncover the date
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
-              <ScratchOff label="Day" revealText="28" size={112} />
-              <ScratchOff label="Month" revealText="Mar" size={112} />
-              <ScratchOff label="Year" revealText="2026" size={112} />
+            <div className="flex flex-wrap justify-center gap-7 sm:gap-10">
+              <ScratchOff label="Day" revealText="28" size={128} />
+              <ScratchOff label="Month" revealText="Mar" size={128} />
+              <ScratchOff label="Year" revealText="2026" size={128} />
             </div>
           </motion.section>
 
@@ -225,12 +243,15 @@ const Index = () => {
             <img
               src={floralBorder}
               alt=""
-              className="w-52 sm:w-64 md:w-72 max-w-[min(100%,18rem)] mx-auto mb-10 sm:mb-12 opacity-45"
+              className="mx-auto mb-10 sm:mb-12 opacity-50 w-[min(90vw,26rem)] h-auto"
               loading="lazy"
-              width={520}
-              height={220}
+              width={600}
+              height={260}
             />
-            <p className="font-display text-3xl sm:text-4xl md:text-[2.65rem] italic leading-snug mb-4" style={{ color: "hsl(340, 65%, 47%)" }}>
+            <p
+              className="font-display italic leading-snug mb-4 px-2"
+              style={{ color: "hsl(340, 65%, 47%)", fontSize: "clamp(1.75rem, 6vw, 2.85rem)" }}
+            >
               The Patil Family
               <br />
               eagerly awaits
