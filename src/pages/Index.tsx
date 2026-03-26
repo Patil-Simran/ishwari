@@ -5,6 +5,7 @@ import ScratchOff from "@/components/ScratchOff";
 import Countdown from "@/components/Countdown";
 import DressCode from "@/components/DressCode";
 import FloatingPetals from "@/components/FloatingPetals";
+import ScrollDownHint from "@/components/ScrollDownHint";
 import couplePhoto from "@/assets/couple-photo.jpg";
 import floralBorder from "@/assets/floral-border.png";
 
@@ -113,15 +114,7 @@ const Index = () => {
             </h2>
             <div className="text-5xl sm:text-6xl mt-6 sm:mt-7">💍✨</div>
 
-            <motion.div
-              className="mt-16 sm:mt-20 opacity-[0.35]"
-              animate={{ y: [0, 8, 0] }}
-              transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-            >
-              <svg width="20" height="34" viewBox="0 0 16 28" style={{ color: "hsl(340, 65%, 47%)" }}>
-                <path d="M8 0 L8 22 M2 16 L8 22 L14 16" stroke="currentColor" strokeWidth="1.25" fill="none" />
-              </svg>
-            </motion.div>
+            <ScrollDownHint className="mt-14 sm:mt-20 pb-2" />
           </motion.section>
 
           {/* Scratch-Off Date Reveal */}
@@ -145,22 +138,14 @@ const Index = () => {
               <ScratchOff label="Month" revealText="Mar" size={128} />
               <ScratchOff label="Year" revealText="2026" size={128} />
             </div>
+            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
           </motion.section>
-
-          {/* Thin divider */}
-          <div className="flex justify-center py-5">
-            <div className="w-px h-20 sm:h-24" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.18)" }} />
-          </div>
 
           {/* Countdown */}
           <motion.section className="py-14 sm:py-16" {...fadeUp}>
             <Countdown />
+            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
           </motion.section>
-
-          {/* Divider */}
-          <div className="flex justify-center py-5">
-            <div className="w-px h-20 sm:h-24" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.18)" }} />
-          </div>
 
           {/* Details */}
           <motion.section className="py-16 sm:py-20 px-6 sm:px-8 text-center" {...fadeUp}>
@@ -197,22 +182,14 @@ const Index = () => {
                 </p>
               </div>
             </div>
+            <ScrollDownHint className="pt-12 sm:pt-14 pb-2" />
           </motion.section>
-
-          {/* Divider */}
-          <div className="flex justify-center py-5">
-            <div className="w-px h-20 sm:h-24" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.18)" }} />
-          </div>
 
           {/* Dress Code */}
           <section className="py-14 sm:py-16">
             <DressCode />
+            <ScrollDownHint className="pt-10 sm:pt-12 pb-2" />
           </section>
-
-          {/* Divider */}
-          <div className="flex justify-center py-5">
-            <div className="w-px h-20 sm:h-24" style={{ backgroundColor: "hsl(340, 65%, 47%, 0.18)" }} />
-          </div>
 
           {/* Footer */}
           <motion.footer className="py-20 sm:py-24 text-center px-8 sm:px-10" {...fadeUp}>
